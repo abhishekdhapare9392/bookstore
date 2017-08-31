@@ -44,5 +44,14 @@ app.get('/api/books/:_id', function(req, res) {
     });
 });
 
+app.get('/api/genres/:_id', function(req, res) {
+    Genre.getGenreById(req.params._id, function(err, genre) {
+        if (err) {
+            throw err;
+        }
+        res.json(genre);
+    });
+});
+
 app.listen(3000);
 console.log('Running on port 3000 .... ');
