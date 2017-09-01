@@ -7,9 +7,12 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "dependencies": {
+        "body-parser": "^1.17.2",
+        "bower": "*",
         "express": "*",
-        "body-parser": "*",
-        "mongoose": "*"
+        "yarn": "*",
+        "mongoose": "^4.11.9",
+        "node-restful": "^0.2.6"
     },
     "author": "Abhishek Dhapare",
     "license": "ISC"
