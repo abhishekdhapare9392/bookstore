@@ -10,6 +10,7 @@ app.use(bodyParser.json());
 
 Genre = require('./models/genres');
 Book = require('./models/books');
+User = require('./models/users');
 
 
 
@@ -21,6 +22,7 @@ mongoose.connect('mongodb://localhost/bookstore', {
 var db = mongoose.connection;
 
 
+//genres api
 app.get('/', function(req, res) {
     res.send('Please use /api/books or /api/genres');
 });
@@ -75,6 +77,8 @@ app.delete('/api/genres/:_id', function(req, res) {
     });
 });
 
+// books api
+
 app.post('/api/books', function(req, res) {
     var book = req.body;
     Book.addBook(book, function(err, book) {
@@ -126,6 +130,27 @@ app.delete('/api/books/:_id', function(req, res) {
     });
 });
 
+
+// users api
+
+app.get('/api/users', function(req, res) {
+    User.getUser(function(err, users) {
+        if (err) {
+            throw err;
+        }
+        res.json(users);
+    });
+});
+
+app.post('/api/users', function(req, res) {
+    var user = req.body;
+    User.addUser(user, function(err, user) {
+        if (err) {
+            throw err;
+        }
+        res.json(user);
+    });
+});
 
 
 

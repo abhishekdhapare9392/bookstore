@@ -30,3 +30,12 @@
     "image_url": "https://images-na.ssl-images-amazon.com/images/I/51b0QKcBKML._SX323_BO1,204,203,200_.jpg",
     "buy_url": "https://www.amazon.in/2-States-Story-My-Marriage/dp/8129135523/ref=sr_1_1?ie=UTF8&qid=1504201348&sr=8-1&keywords=2+states%5C"
 }
+
+db.users.insert({ name: 'Aniket Dhapare', username: 'admin', password: 'pass123456', email: 'aniket@gmail.com' })
+
+{
+    "name": "Aniket Dhapare",
+    "username": "admin",
+    "password": "pass123456",
+    "email": "aniket@gmail.com"
+}
